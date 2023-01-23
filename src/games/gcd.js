@@ -20,7 +20,7 @@ const getCommonDivider = () => {
   for (let i = 0; i < 3; i += 1) {
     const ranNum1 = Math.floor(Math.random() * 20 + 1);
     const ranNum2 = Math.floor(Math.random() * 20 + 1);
-    console.log(`What's the common divider? ${ranNum1} ${ranNum2}`);
+    console.log(`${ranNum1} ${ranNum2}`);
 
     const userAnswer = Number(readlineSync.question('Your answer: '));
     if (commonDivider(ranNum1, ranNum2) === userAnswer) {
