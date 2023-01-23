@@ -14,8 +14,8 @@ const commonDivider = (ranNum1, ranNum2) => {
     if (ranNum1 % i === 0 && ranNum2 % i === 0) {
       divider = i;
       break;
-    };
-  };
+    }
+  }
   return divider;
 };
 
