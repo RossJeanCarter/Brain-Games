@@ -17,7 +17,7 @@ const getPrimeNumber = () => {
       } if (number === 1) {
         return 'no';
       }
-      return number % 2 !== 0 && number % 3 !== 0 && number % 5 !== 0 && number % 7 !== 0? 'yes' : 'no';
+      return number % 2 !== 0 && number % 3 !== 0 && number % 5 !== 0 && number % 7 !== 0 ? 'yes' : 'no';
     };
 
     console.log(`Question: ${randomNumber}`);

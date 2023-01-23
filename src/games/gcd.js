@@ -8,12 +8,15 @@ console.log(`Hello, ${userName}!`);
 console.log('Find the greatest common divisor of given numbers');
 
 const commonDivider = (ranNum1, ranNum2) => {
+  let divider;
   const minNumber = Math.min(ranNum1, ranNum2);
   for (let i = minNumber; i > 0; i -= 1) {
     if (ranNum1 % i === 0 && ranNum2 % i === 0) {
-      return i;
-    }
-  }
+      divider = i;
+      break;
+    };
+  };
+  return divider;
 };
 
 const getCommonDivider = () => {
