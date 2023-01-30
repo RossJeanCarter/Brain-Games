@@ -10,9 +10,9 @@ console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 const runPrimeNumberGame = () => {
   for (let i = 0; i < 3; i += 1) {
     const randomNumber = Math.floor(Math.random() * 50 + 1);
-
+    const primeNumsBefore10 = [2, 3, 5, 7];
     const isPrime = (number) => {
-      if (number > 1 && number < 4) {
+      if (primeNumsBefore10.includes(number)) {
         return 'yes';
       } if (number === 1) {
         return 'no';
