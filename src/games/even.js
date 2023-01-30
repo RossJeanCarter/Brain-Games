@@ -7,7 +7,7 @@ console.log(`Hello, ${userName}!`);
 
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
-const runEvenNumberGame  = () => {
+const runEvenNumberGame = () => {
   for (let i = 0; i < 3; i += 1) {
     const randomNum = Math.floor(Math.random() * 50) + 1;
     console.log(`Question: ${randomNum} `);
