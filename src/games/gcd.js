@@ -19,7 +19,7 @@ const commonDivider = (ranNum1, ranNum2) => {
   return divider;
 };
 
-const getCommonDivider = () => {
+const runGreatestCommonDividerGame = () => {
   for (let i = 0; i < 3; i += 1) {
     const ranNum1 = Math.floor(Math.random() * 20 + 1);
     const ranNum2 = Math.floor(Math.random() * 20 + 1);
@@ -37,4 +37,4 @@ const getCommonDivider = () => {
   return gameWin;
 };
 
-export default getCommonDivider;
+export default runGreatestCommonDividerGame;

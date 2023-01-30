@@ -7,7 +7,7 @@ console.log(`Hello, ${userName}!`);
 
 console.log('What number is missing in the progression?');
 
-const getProgression = () => {
+const runProgressionGame = () => {
   for (let i = 0; i < 3; i += 1) {
     const randomNumber = Math.floor(Math.random() * 55 + 1);
     const randomStep = Math.floor(Math.random() * 5 + 1);
@@ -36,4 +36,4 @@ const getProgression = () => {
   return gameWin;
 };
 
-export default getProgression;
+export default runProgressionGame;

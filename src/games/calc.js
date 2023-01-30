@@ -7,7 +7,7 @@ console.log(`Hello, ${userName}!`);
 
 console.log('What is the result of the expression?');
 
-const getOperationResult = () => {
+const runCalculatorGame = () => {
   for (let i = 0; i < 3; i += 1) {
     const randomNum1 = Math.floor(Math.random() * 15) + 1;
     const randomNum2 = Math.floor(Math.random() * 15) + 1;
@@ -41,4 +41,4 @@ const getOperationResult = () => {
   return gameWin;
 };
 
-export default getOperationResult;
+export default runCalculatorGame;
