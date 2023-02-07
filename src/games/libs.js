@@ -1,3 +1,6 @@
-const generateRandomNumber = (multiplier, addOne = 0) => Math.floor(Math.random() * multiplier) + addOne;
-  
+const generateRandomNumber = (multiplier, addOne = 0) => {
+    const randomNumber = Math.floor(Math.random() * multiplier) + addOne;
+    return randomNumber;
+};
+
 export default generateRandomNumber;

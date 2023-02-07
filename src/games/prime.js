@@ -12,14 +12,14 @@ const gameLogic = () => {
     for (let i = 2; i <= randomNumber / 2; i += 1) {
       if (randomNumber % i === 0) {
         return 'no';
-        }
+      }
     }
     return 'yes';
   };
   const dataCore = {
     question: `Question: ${randomNumber}`,
     answer: isPrime(randomNumber),
-  }
+  };
   return dataCore;
 };
 

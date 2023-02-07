@@ -4,7 +4,6 @@ import generateRandomNumber from './libs.js';
 const gameDescription = 'What number is missing in the progression?';
 
 const gameLogic = () => {
-
   const randomNumber = generateRandomNumber(55, 1);
   const randomStep = generateRandomNumber(5, 1);
   const randomCryptedNumber = generateRandomNumber(10);

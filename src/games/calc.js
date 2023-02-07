@@ -28,7 +28,7 @@ const gameLogic = () => {
     question: `Question: ${randomNum1} ${randomOperator} ${randomNum2}`,
     answer: result,
   };
-    return dataCore;
+  return dataCore;
 };
 
 export { startGame, gameDescription, gameLogic };
