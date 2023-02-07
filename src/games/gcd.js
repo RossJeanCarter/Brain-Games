@@ -22,9 +22,9 @@ const gameLogic = () => {
 
   const dataCore = {
     question: `Question: ${ranNum1} ${ranNum2}`,
-    answer: answer,
-  } 
+    answer,
+  };
   return dataCore;
-}
+};
 
-export { startGame, gameDescription, gameLogic};
+export { startGame, gameDescription, gameLogic };
