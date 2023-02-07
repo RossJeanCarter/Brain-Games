@@ -57,7 +57,8 @@
    #### brain-progression
 
  #### Description: 
-      > the user is shown a random arithmetic progression. One number is hidden behind the two points. The user needs to guess the number.
+      > the user is shown a random arithmetic progression. 
+      > One number is hidden behind the two points. The user needs to guess the number.
 
  #### Example:
 
