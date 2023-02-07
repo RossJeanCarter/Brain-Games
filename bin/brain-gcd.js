@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import runGreatestCommonDividerGame from '../src/games/gcd.js';
+import { startGame, gameDescription, gameLogic} from '../src/games/gcd.js';
 
-runGreatestCommonDividerGame();
+startGame(gameDescription, gameLogic);

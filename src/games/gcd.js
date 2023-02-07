@@ -1,40 +1,30 @@
-import readlineSync from 'readline-sync';
+import startGame from '../index.js';
+import generateRandomNumber from './libs.js';
 
-console.log('Welcome to the Brain Games!');
+const gameDescription = 'Find the greatest common divisor of given numbers';
 
-const userName = readlineSync.question('May I have your name? ');
-console.log(`Hello, ${userName}!`);
-
-console.log('Find the greatest common divisor of given numbers');
-
-const commonDivider = (ranNum1, ranNum2) => {
-  let divider;
-  const minNumber = Math.min(ranNum1, ranNum2);
-  for (let i = minNumber; i > 0; i -= 1) {
-    if (ranNum1 % i === 0 && ranNum2 % i === 0) {
-      divider = i;
-      break;
+const gameLogic = () => {
+  const findCommonDivider = (ranNum1, ranNum2) => {
+    let divider;
+    const minNumber = Math.min(ranNum1, ranNum2);
+    for (let i = minNumber; i > 0; i -= 1) {
+      if (ranNum1 % i === 0 && ranNum2 % i === 0) {
+        divider = i;
+        break;
+      }
     }
-  }
-  return divider;
-};
+    return divider;
+  };
+  const ranNum1 = generateRandomNumber(50, 1);
+  const ranNum2 = generateRandomNumber(50, 1);
 
-const runGreatestCommonDividerGame = () => {
-  for (let i = 0; i < 3; i += 1) {
-    const ranNum1 = Math.floor(Math.random() * 20 + 1);
-    const ranNum2 = Math.floor(Math.random() * 20 + 1);
-    console.log(`Question: ${ranNum1} ${ranNum2}`);
+  const answer = findCommonDivider(ranNum1, ranNum2);
 
-    const userAnswer = Number(readlineSync.question('Your answer: '));
-    if (commonDivider(ranNum1, ranNum2) === userAnswer) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${commonDivider(ranNum1, ranNum2)}'.\n Let's try again, ${userName}!`);
-      return false;
-    }
-  }
-  const gameWin = console.log(`Congratulations, ${userName}!`);
-  return gameWin;
-};
+  const dataCore = {
+    question: `Question: ${ranNum1} ${ranNum2}`,
+    answer: answer,
+  } 
+  return dataCore;
+}
 
-export default runGreatestCommonDividerGame;
+export { startGame, gameDescription, gameLogic};

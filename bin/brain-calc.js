@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import runCalculatorGame from '../src/games/calc.js';
+import {startGame, gameDescription, gameLogic} from '../src/games/calc.js';
 
-runCalculatorGame();
+startGame(gameDescription, gameLogic);

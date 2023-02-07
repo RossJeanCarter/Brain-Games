@@ -1,39 +1,31 @@
-import readlineSync from 'readline-sync';
+import startGame from "../index.js";
+import generateRandomNumber from "./libs.js";
 
-console.log('Welcome to the Brain Games!');
+const gameDescription = 'What number is missing in the progression?';
 
-const userName = readlineSync.question('May I have your name? ');
-console.log(`Hello, ${userName}!`);
+const gameLogic = () => {
 
-console.log('What number is missing in the progression?');
-
-const runProgressionGame = () => {
-  for (let i = 0; i < 3; i += 1) {
-    const randomNumber = Math.floor(Math.random() * 55 + 1);
-    const randomStep = Math.floor(Math.random() * 5 + 1);
-    const randomCryptedNumber = Math.floor(Math.random() * 10);
+    const randomNumber = generateRandomNumber(55, 1);
+    const randomStep = generateRandomNumber(5, 1);
+    const randomCryptedNumber = generateRandomNumber(10);
 
     let array = [];
-    for (let j = randomNumber; j < 101; j += randomStep) {
-      array.push(j);
+
+    for (let i = randomNumber; i < 101; i += randomStep) {
+      array.push(i);
     }
 
     array = array.slice(0, 10);
-    const answerNumber = array[randomCryptedNumber];
+    const answer = array[randomCryptedNumber];
     array[randomCryptedNumber] = '..';
     array = array.join(' ');
 
-    console.log(`Question: ${array}`);
-    const userAnswer = Number(readlineSync.question('Your answer: '));
-    if (userAnswer === answerNumber) {
-      console.log('Correct');
-    } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answerNumber}'.\n Let's try again, ${userName}!`);
-      return false;
+   const dataCore = {
+      question: `Question: ${array}`,
+      answer: answer,
     }
-  }
-  const gameWin = console.log(`Congratulations, ${userName}!`);
-  return gameWin;
+    return dataCore;
+
 };
 
-export default runProgressionGame;
+export {startGame, gameDescription, gameLogic};
