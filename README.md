@@ -11,10 +11,10 @@
 
  ### Installation: 
 
-   > git@github.com:RossJeanCarter/frontend-project-44.git
-   > make install
-   > npm link
-   > After the installation just type the name of the games given below and you are ready to play.
+    git@github.com:RossJeanCarter/frontend-project-44.git
+    make install
+    npm link
+    After the installation just type the name of the games given below and you are ready to play.
 
  ### Games:
 
