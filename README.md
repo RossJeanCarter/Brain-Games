@@ -39,7 +39,7 @@
    #### brain-gcd
 
  #### Description: 
-      > the user is shown a two random numbers. He needs to calculate the greatest common divisor of these numbers.
+      > the user is shown two random numbers. He needs to calculate the greatest common divisor of these numbers.
 
  #### Example:
 
