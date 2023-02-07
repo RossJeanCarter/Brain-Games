@@ -11,7 +11,7 @@ const startGame = (gameDescription, gameLogic) => {
     console.log(gameData.question);
     const userAnswer = readlineSync.question('Your answer: ');
 
-    if (userAnswer == gameData.answer) {
+    if (userAnswer === gameData.answer) {
       console.log('Correct!');
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${gameData.answer}'.\n Let's try again, ${userName}!`);

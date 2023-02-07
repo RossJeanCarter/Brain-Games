@@ -26,7 +26,7 @@ const gameLogic = () => {
 
   const dataCore = {
     question: `Question: ${randomNum1} ${randomOperator} ${randomNum2}`,
-    answer: result,
+    answer: String(result),
   };
   return dataCore;
 };

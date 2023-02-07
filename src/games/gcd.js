@@ -22,7 +22,7 @@ const gameLogic = () => {
 
   const dataCore = {
     question: `Question: ${ranNum1} ${ranNum2}`,
-    answer,
+    answer: String(answer),
   };
   return dataCore;
 };

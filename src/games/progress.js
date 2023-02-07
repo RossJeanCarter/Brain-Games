@@ -21,7 +21,7 @@ const gameLogic = () => {
 
   const dataCore = {
     question: `Question: ${array}`,
-    answer,
+    answer: String(answer),
   };
   return dataCore;
 };
