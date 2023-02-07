@@ -20,7 +20,8 @@
 
  #### brain-calc
 
- #### Description: the user is shown a random mathematical expression. The user's task is to give the right answer.
+ #### Description: 
+     > the user is shown a random mathematical expression. The user's task is to give the right answer.
 
  #### Example:
 
@@ -28,7 +29,8 @@
 
    #### brain-even 
 
- #### Description: the user is shown a random number. He needs to respond "yes" or "no".
+ #### Description: 
+     > the user is shown a random number. He needs to respond "yes" or "no".
 
  #### Example:
 
@@ -36,7 +38,8 @@
 
    #### brain-gcd
 
- #### Description: the user is shown a two random numbers. He needs to calculate the greatest common divisor of these numbers.
+ #### Description: 
+      > the user is shown a two random numbers. He needs to calculate the greatest common divisor of these numbers.
 
  #### Example:
 
@@ -44,7 +47,8 @@
 
    #### brain-prime
 
- #### Description: the user is shown a random number. He needs to answer whether the number is prime or no, giving the reponse "yes" or "no".
+ #### Description: 
+      > the user is shown a random number. He needs to answer whether the number is prime or no, giving the reponse "yes" or "no".
 
   #### Example:
 
@@ -52,7 +56,8 @@
 
    #### brain-progression
 
- #### Description: the user is shown a random arithmetic progression. One number is hidden behind the two points. The user needs to guess the number.
+ #### Description: 
+      > the user is shown a random arithmetic progression. One number is hidden behind the two points. The user needs to guess the number.
 
  #### Example:
 
