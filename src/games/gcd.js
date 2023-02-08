@@ -1,9 +1,9 @@
 import startGame from '../index.js';
-import generateRandomNumber from './libs.js';
+import generateRandomNumber from '../utils/libs.js';
 
 const gameDescription = 'Find the greatest common divisor of given numbers';
 
-const gameLogic = () => {
+const runGameLogic = () => {
   const findCommonDivider = (ranNum1, ranNum2) => {
     let divider;
     const minNumber = Math.min(ranNum1, ranNum2);
@@ -20,11 +20,11 @@ const gameLogic = () => {
 
   const answer = findCommonDivider(ranNum1, ranNum2);
 
-  const dataCore = {
+  const gameData = {
     question: `Question: ${ranNum1} ${ranNum2}`,
     answer: String(answer),
   };
-  return dataCore;
+  return gameData;
 };
 
-export { startGame, gameDescription, gameLogic };
+export default () => startGame(gameDescription, runGameLogic);

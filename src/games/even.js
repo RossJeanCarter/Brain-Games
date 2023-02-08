@@ -1,20 +1,20 @@
 import startGame from '../index.js';
-import generateRandomNumber from './libs.js';
+import generateRandomNumber from '../utils/libs.js';
 
 const gameDescription = ('Answer "yes" if the number is even, otherwise answer "no".');
 
 const isEven = (number) => number % 2 === 0;
 
-const gameLogic = () => {
+const runGameLogic  = () => {
   const ranNum = generateRandomNumber(50, 1);
   const answer = isEven(ranNum) ? 'yes' : 'no';
 
-  const dataCore = {
+  const gameData = {
     question: `Question: ${ranNum}`,
     answer,
   };
 
-  return dataCore;
+  return gameData;
 };
 
-export { startGame, gameDescription, gameLogic };
+export default () => startGame(gameDescription, runGameLogic);

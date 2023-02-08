@@ -1,34 +1,38 @@
 import startGame from '../index.js';
-import generateRandomNumber from './libs.js';
+import generateRandomNumber from '../utils/libs.js';
 
 const gameDescription = 'What is the result of the expression?';
 
-const gameLogic = () => {
+const runGameLogic = () => {
   const randomNum1 = generateRandomNumber(15);
   const randomNum2 = generateRandomNumber(15);
   const operators = ['+', '-', '*'];
-  const randomOperator = operators[generateRandomNumber(3)];
-  let result;
+  const numberOfOperators = operators.length;
+  const randomOperator = operators[generateRandomNumber(numberOfOperators)];
 
-  switch (randomOperator) {
-    case '+':
-      result = randomNum1 + randomNum2;
-      break;
-    case '-':
-      result = randomNum1 - randomNum2;
-      break;
-    case '*':
-      result = randomNum1 * randomNum2;
-      break;
-    default:
-      break;
+  const getCalculationResult = () => {
+    let result;
+    switch (randomOperator) {
+      case '+':
+        result = randomNum1 + randomNum2;
+        break;
+      case '-':
+        result = randomNum1 - randomNum2;
+        break;
+      case '*':
+        result = randomNum1 * randomNum2;
+        break;
+      default:
+        break;
+    }
+    return result;
   }
 
-  const dataCore = {
+  const gameData = {
     question: `Question: ${randomNum1} ${randomOperator} ${randomNum2}`,
-    answer: String(result),
+    answer: String(getCalculationResult()),
   };
-  return dataCore;
+  return gameData;
 };
 
-export { startGame, gameDescription, gameLogic };
+export default () => startGame(gameDescription, runGameLogic);
