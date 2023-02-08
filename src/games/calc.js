@@ -26,7 +26,7 @@ const runGameLogic = () => {
         break;
     }
     return result;
-  }
+  };
 
   const gameData = {
     question: `Question: ${randomNum1} ${randomOperator} ${randomNum2}`,

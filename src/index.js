@@ -10,7 +10,7 @@ const startGame = (gameDescription, runGameLogic) => {
 
   for (let i = 0; i < roundCount; i += 1) {
     const gameData = runGameLogic();
-    const {question, answer} = gameData;
+    const { question, answer } = gameData;
     console.log(question);
     const userAnswer = readlineSync.question('Your answer: ');
 

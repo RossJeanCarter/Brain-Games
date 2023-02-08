@@ -5,7 +5,7 @@ const gameDescription = ('Answer "yes" if the number is even, otherwise answer "
 
 const isEven = (number) => number % 2 === 0;
 
-const runGameLogic  = () => {
+const runGameLogic = () => {
   const ranNum = generateRandomNumber(50, 1);
   const answer = isEven(ranNum) ? 'yes' : 'no';
 
