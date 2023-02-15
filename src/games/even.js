@@ -1,19 +1,17 @@
 import startGame from '../index.js';
-import generateRandomNumber from '../utils/libs.js';
+import { generateRandomNumber, minNumberLimit, maxNumberLimit } from '../utils/libs.js';
 
 const gameDescription = ('Answer "yes" if the number is even, otherwise answer "no".');
 
 const isEven = (number) => number % 2 === 0;
 
 const runGameLogic = () => {
-  const ranNum = generateRandomNumber(50, 1);
+  const ranNum = generateRandomNumber(maxNumberLimit, minNumberLimit);
   const answer = isEven(ranNum) ? 'yes' : 'no';
-
   const gameData = {
     question: `Question: ${ranNum}`,
     answer,
   };
-
   return gameData;
 };
 

@@ -1,6 +1,9 @@
-const generateRandomNumber = (multiplier, addOne = 0) => {
-  const randomNumber = Math.floor(Math.random() * multiplier) + addOne;
+const generateRandomNumber = (maxNumberLimit, minNumberLimit = 0) => {
+  const randomNumber = Math.floor(Math.random() * maxNumberLimit) + minNumberLimit;
   return randomNumber;
 };
 
-export default generateRandomNumber;
+const minNumberLimit = 1;
+const maxNumberLimit = 55;
+
+export { minNumberLimit, maxNumberLimit, generateRandomNumber };
