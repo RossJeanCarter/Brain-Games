@@ -19,7 +19,7 @@ const runGameLogic = () => {
   const randomNumber = generateRandomNumber(maxNumberLimit, minNumberLimit);
   const randomStep = generateRandomNumber(maxStepNumber, minNumberLimit);
   const randomCryptedNumber = generateRandomNumber(10);
-  
+
   const progressionArray = getRandomProgression(randomNumber, randomStep);
   const answer = progressionArray[randomCryptedNumber];
   progressionArray[randomCryptedNumber] = '..';

@@ -18,7 +18,7 @@ const isPrime = (randomNumber) => {
 const runGameLogic = () => {
   const randomNumber = generateRandomNumber(maxNumberLimit, minNumberLimit);
   const answer = isPrime(randomNumber) ? 'yes' : 'no';
-  
+
   const gameData = {
     question: `Question: ${randomNumber}`,
     answer,
