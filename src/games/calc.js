@@ -6,13 +6,14 @@ const gameDescription = 'What is the result of the expression?';
 const getCalculationResult = (randomOperator, randomNum1, randomNum2) => {
   switch (randomOperator) {
     case '+':
-      return randomNum1 + randomNum2;  
+      return randomNum1 + randomNum2;
     case '-':
       return randomNum1 - randomNum2;
     case '*':
       return randomNum1 * randomNum2;
+    default:
+      console.log('There wasnt found any operator');
   }
-  return result;
 };
 
 const runGameLogic = () => {

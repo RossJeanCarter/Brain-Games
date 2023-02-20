@@ -3,4 +3,5 @@ const generateRandomNumber = (maxNumberLimit, minNumberLimit = 0) => {
   return randomNumber;
 };
 
-export { generateRandomNumber };
+export default generateRandomNumber;
+
