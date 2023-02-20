@@ -14,6 +14,7 @@ const getCalculationResult = (randomOperator, randomNum1, randomNum2) => {
     default:
       console.log('There wasnt found any operator');
   }
+  return;
 };
 
 const runGameLogic = () => {
