@@ -3,7 +3,4 @@ const generateRandomNumber = (maxNumberLimit, minNumberLimit = 0) => {
   return randomNumber;
 };
 
-const minNumberLimit = 1;
-const maxNumberLimit = 55;
-
-export { minNumberLimit, maxNumberLimit, generateRandomNumber };
+export { generateRandomNumber };

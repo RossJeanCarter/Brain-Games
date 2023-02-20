@@ -1,12 +1,9 @@
 import startGame from '../index.js';
-import { generateRandomNumber, minNumberLimit, maxNumberLimit } from '../utils/libs.js';
+import { generateRandomNumber } from '../utils/libs.js';
 
 const gameDescription = 'What number is missing in the progression?';
 
-const progressionLimitRaw = 101;
-const maxStepNumber = 5;
-
-const getRandomProgression = (randomNumber, randomStep) => {
+const getRandomProgression = (randomNumber, randomStep, progressionLimitRaw = 101) => {
   let array = [];
   for (let i = randomNumber; i < progressionLimitRaw; i += randomStep) {
     array.push(i);
@@ -16,8 +13,8 @@ const getRandomProgression = (randomNumber, randomStep) => {
 };
 
 const runGameLogic = () => {
-  const randomNumber = generateRandomNumber(maxNumberLimit, minNumberLimit);
-  const randomStep = generateRandomNumber(maxStepNumber, minNumberLimit);
+  const randomNumber = generateRandomNumber(55, 1);
+  const randomStep = generateRandomNumber(5, 1);
   const randomCryptedNumber = generateRandomNumber(10);
 
   const progressionArray = getRandomProgression(randomNumber, randomStep);

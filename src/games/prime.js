@@ -1,5 +1,5 @@
 import startGame from '../index.js';
-import { generateRandomNumber, minNumberLimit, maxNumberLimit } from '../utils/libs.js';
+import { generateRandomNumber } from '../utils/libs.js';
 
 const gameDescription = ('Answer "yes" if given number is prime. Otherwise answer "no".');
 
@@ -16,7 +16,7 @@ const isPrime = (randomNumber) => {
 };
 
 const runGameLogic = () => {
-  const randomNumber = generateRandomNumber(maxNumberLimit, minNumberLimit);
+  const randomNumber = generateRandomNumber(55, 1);
   const answer = isPrime(randomNumber) ? 'yes' : 'no';
 
   const gameData = {

@@ -1,5 +1,5 @@
 import startGame from '../index.js';
-import { generateRandomNumber, minNumberLimit, maxNumberLimit } from '../utils/libs.js';
+import { generateRandomNumber } from '../utils/libs.js';
 
 const gameDescription = 'Find the greatest common divisor of given numbers';
 
@@ -16,8 +16,8 @@ const findCommonDivider = (ranNum1, ranNum2) => {
 };
 
 const runGameLogic = () => {
-  const ranNum1 = generateRandomNumber(maxNumberLimit, minNumberLimit);
-  const ranNum2 = generateRandomNumber(maxNumberLimit, minNumberLimit);
+  const ranNum1 = generateRandomNumber(55, 1);
+  const ranNum2 = generateRandomNumber(55, 1);
 
   const answer = findCommonDivider(ranNum1, ranNum2);
 
