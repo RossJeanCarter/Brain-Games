@@ -9,13 +9,13 @@ const startGame = (gameDescription, runGameLogic) => {
   console.log(gameDescription);
 
   for (let i = 0; i < roundCount; i += 1) {
-    const { question, answer } = runGameLogic();
+    const { question, rightAnswer } = runGameLogic();
     console.log(question);
     const userAnswer = readlineSync.question('Your answer: ');
-    if (userAnswer === answer) {
+    if (userAnswer === rightAnswer) {
       console.log('Correct!');
     } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.\n Let's try again, ${userName}!`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\n Let's try again, ${userName}!`);
       return;
     }
   }

@@ -12,21 +12,20 @@ const getCalculationResult = (randomOperator, randomNum1, randomNum2) => {
     case '*':
       return randomNum1 * randomNum2;
     default:
-      console.log('There wasnt found any operator');
+      throw new Error('Ошибка');
   }
-  return false;
 };
 
 const runGameLogic = () => {
-  const randomNum1 = generateRandomNumber(55, 1);
-  const randomNum2 = generateRandomNumber(55, 1);
+  const randomNum1 = generateRandomNumber();
+  const randomNum2 = generateRandomNumber();
   const operators = ['+', '-', '*'];
   const numberOfOperators = operators.length;
-  const randomOperator = operators[generateRandomNumber(numberOfOperators)];
+  const randomOperator = operators[generateRandomNumber(numberOfOperators, 0)];
 
   const gameData = {
     question: `Question: ${randomNum1} ${randomOperator} ${randomNum2}`,
-    answer: String(getCalculationResult(randomOperator, randomNum1, randomNum2)),
+    rightAnswer: String(getCalculationResult(randomOperator, randomNum1, randomNum2)),
   };
   return gameData;
 };

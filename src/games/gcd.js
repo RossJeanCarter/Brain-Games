@@ -16,14 +16,14 @@ const findCommonDivider = (ranNum1, ranNum2) => {
 };
 
 const runGameLogic = () => {
-  const ranNum1 = generateRandomNumber(55, 1);
-  const ranNum2 = generateRandomNumber(55, 1);
+  const ranNum1 = generateRandomNumber();
+  const ranNum2 = generateRandomNumber();
 
   const answer = findCommonDivider(ranNum1, ranNum2);
 
   const gameData = {
     question: `Question: ${ranNum1} ${ranNum2}`,
-    answer: String(answer),
+    rightAnswer: String(answer),
   };
   return gameData;
 };

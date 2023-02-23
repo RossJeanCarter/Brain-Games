@@ -16,12 +16,12 @@ const isPrime = (randomNumber) => {
 };
 
 const runGameLogic = () => {
-  const randomNumber = generateRandomNumber(55, 1);
-  const answer = isPrime(randomNumber) ? 'yes' : 'no';
+  const randomNumber = generateRandomNumber();
+  const rightAnswer = isPrime(randomNumber) ? 'yes' : 'no';
 
   const gameData = {
     question: `Question: ${randomNumber}`,
-    answer,
+    rightAnswer,
   };
   return gameData;
 };
