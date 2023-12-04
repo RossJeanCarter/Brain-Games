@@ -11,7 +11,7 @@
 
  ### Installation: 
 
-    git@github.com:RossJeanCarter/frontend-project-44.git
+    git clone https://github.com/RossJeanCarter/Brain-Games.git
     make install
     npm link
     After the installation just type the name of the games given below and you are ready to play.
